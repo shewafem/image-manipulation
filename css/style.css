@@ -1,0 +1,149 @@
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-family: "Nunito Sans";
+	font-size: 16px;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+/*--------------------*/
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	padding: 20px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.content {
+	flex: 1 0 auto;
+	margin-top: 5px;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.header {
+	width: 100vw; /* 100% ширины видимой области */
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw; /* компенсируем половину ширины видимой области */
+	margin-right: -50vw; /* компенсируем половину ширины видимой области */
+}
+
+.nav {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav__list {
+	line-height: 48px;
+	text-align: center;
+	padding: 10px;
+	margin: 0;
+}
+
+.nav__link {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.button-container {
+	display: flex;
+	gap: 10px;
+}
+
+.load-button, .clear-button {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 25px;
+}

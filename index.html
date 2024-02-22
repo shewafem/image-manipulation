@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Загрузка изображения</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link"
+								>Сервис обработки изображений 🖼️
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<main class="content">
+				<div class="button-container">
+					<button
+						type="button"
+						class="load-button btn btn-success align-self-start text-nowrap"
+						data-bs-toggle="modal"
+						data-bs-target="#modal"
+					>
+						Загрузить изображение 📤
+					</button>
+					<button
+						class="clear-button btn btn-secondary align-self-start text-nowrap"
+						id="clear-button"
+						style="display: none"
+						type="button"
+					>
+						Очистить 🧹
+					</button>
+				</div>
+
+				<!-- Modal -->
+				<div
+					class="modal fade"
+					id="modal"
+					tabindex="-1"
+					aria-labelledby="modalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1
+									class="modal-title fs-5"
+									id="modal-label"
+								>
+									Загрузка изображения
+								</h1>
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+							<div class="modal-body container-fluid">
+								<form class="image-form" id="image-form">
+									<div class="mb-3">
+										<label
+											for="image-input"
+											class="form-label fw-bold"
+											>Загрузите изображение</label
+										>
+										<input
+											class="image-form__input form-control"
+											type="file"
+											id="image-input"
+										/>
+									</div>
+									<div class="mb-3">
+										<label
+											for="url-input"
+											class="form-label fw-bold"
+											>Введите адрес изображения</label
+										>
+										<input
+											class="image-form__input form-control"
+											type="text"
+											id="url-input"
+										/>
+									</div>
+									<div
+										class="modal-footer btn-group mt-4 d-flex justify-content-end"
+									>
+										<button
+											class="image-form__button btn btn-secondary"
+											id="reset-button"
+											type="reset"
+										>
+											Сбросить
+										</button>
+										<button
+											class="image-form__button btn btn-success"
+											id="submit-button"
+											type="submit"
+										>
+											Открыть
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="canvas-section">
+					<canvas class="image" id="image" width="0"></canvas>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="">
+					<ul class="d-flex justify-content-between border-bottom">
+						<li class="">
+							<p class="fw-bold">
+								Размер изображения 📐:
+								<span class="size fw-light"></span>
+							</p>
+						</li>
+						<li class="">
+							<p class="fw-bold">
+								Цвет 🎨: <span class="color fw-light"></span>
+							</p>
+						</li>
+						<li class="">
+							<p class="fw-bold">
+								Координаты 📍:
+								<span class="coordinates fw-light"></span>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<script src="js/main.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
